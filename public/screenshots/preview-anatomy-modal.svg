@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600" style="background:#400000; font-family: 'Inter', system-ui, -apple-system, sans-serif;">
+  <defs>
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="12" />
+      <feColorMatrix type="matrix" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0"/>
+    </filter>
+  </defs>
+
+  <!-- Darkened backdrop -->
+  <rect width="1000" height="600" fill="#000000" fill-opacity="0.75" />
+
+  <!-- Main Modal Window -->
+  <g transform="translate(100, 40)">
+    <rect width="800" height="520" rx="24" fill="#180404" stroke="#ffffff" stroke-opacity="0.2" filter="url(#cardShadow)" />
+    
+    <!-- Modal Header -->
+    <text x="32" y="44" font-size="18" font-weight="800" fill="#ffffff">Salticidae Cutout Rig &amp; Anatomy Architecture</text>
+    <text x="32" y="66" font-size="12" fill="#ffffff" fill-opacity="0.65">3-photo state crossfading, 8-leg 2-bone inverse kinematics, and continuous Jakobsen Verlet silk physics</text>
+    <circle cx="760" cy="45" r="14" fill="#ffffff" fill-opacity="0.1" />
+    <text x="760" y="50" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">✕</text>
+
+    <!-- 3 Cards: Photo 1, Photo 2, Photo 3 -->
+    <g transform="translate(32, 90)">
+      <!-- Card 1: Walking Body Cutout -->
+      <g transform="translate(0, 0)">
+        <rect width="232" height="230" rx="16" fill="#000000" fill-opacity="0.45" stroke="#ffffff" stroke-opacity="0.1" />
+        <!-- Preview Box -->
+        <rect x="16" y="14" width="200" height="120" rx="10" fill="#ffffff" fill-opacity="0.05" />
+        <!-- Simplified Spider Silhouette -->
+        <g transform="translate(116, 74)">
+          <ellipse cx="0" cy="14" rx="18" ry="24" fill="#d49244" />
+          <ellipse cx="0" cy="-12" rx="16" ry="14" fill="#f5b360" />
+          <circle cx="-6" cy="-18" r="4" fill="#000000" />
+          <circle cx="6" cy="-18" r="4" fill="#000000" />
+          <path d="M -12,-6 Q -35,-25 -45,10" fill="none" stroke="#f5b360" stroke-width="3" />
+          <path d="M 12,-6 Q 35,-25 45,10" fill="none" stroke="#f5b360" stroke-width="3" />
+          <path d="M -14,6 Q -45,-5 -52,25" fill="none" stroke="#d49244" stroke-width="3" />
+          <path d="M 14,6 Q 45,-5 52,25" fill="none" stroke="#d49244" stroke-width="3" />
+        </g>
+        <text x="116" y="160" font-size="12" font-weight="700" fill="#38bdf8" text-anchor="middle">1. Walking Body Cutout</text>
+        <text x="16" y="182" font-size="10.5" fill="#ffffff" fill-opacity="0.7">Photo 1 (top-down view) segmented into isolated carapace, abdomen, and 8 articulated 2-bone legs.</text>
+      </g>
+
+      <!-- Card 2: Cute Head Crossfade -->
+      <g transform="translate(252, 0)">
+        <rect width="232" height="230" rx="16" fill="#000000" fill-opacity="0.45" stroke="#f59e0b" stroke-opacity="0.3" />
+        <!-- Preview Box -->
+        <rect x="16" y="14" width="200" height="120" rx="10" fill="#f59e0b" fill-opacity="0.08" />
+        <!-- Cute Eyes Silhouette -->
+        <g transform="translate(116, 74)">
+          <ellipse cx="0" cy="0" rx="30" ry="26" fill="#2d1810" />
+          <circle cx="-12" cy="-6" r="13" fill="#050302" stroke="#402010" stroke-width="2" />
+          <circle cx="12" cy="-6" r="13" fill="#050302" stroke="#402010" stroke-width="2" />
+          <ellipse cx="-15" cy="-9" rx="4" ry="2.5" fill="#ffffff" />
+          <ellipse cx="9" cy="-9" rx="4" ry="2.5" fill="#ffffff" />
+          <circle cx="-10" cy="-3" r="1.5" fill="#ffffff" />
+          <circle cx="14" cy="-3" r="1.5" fill="#ffffff" />
+        </g>
+        <text x="116" y="160" font-size="12" font-weight="700" fill="#fcd34d" text-anchor="middle">2. Cute Head Crossfade</text>
+        <text x="16" y="182" font-size="10.5" fill="#ffffff" fill-opacity="0.7">When motion stops, crossfades to upward-tilted cute portrait with massive glossy black forward eyes.</text>
+      </g>
+
+      <!-- Card 3: Double-Blink State -->
+      <g transform="translate(504, 0)">
+        <rect width="232" height="230" rx="16" fill="#000000" fill-opacity="0.45" stroke="#10b981" stroke-opacity="0.3" />
+        <!-- Preview Box -->
+        <rect x="16" y="14" width="200" height="120" rx="10" fill="#10b981" fill-opacity="0.08" />
+        <!-- Blinking Eyelid Silhouette -->
+        <g transform="translate(116, 74)">
+          <ellipse cx="0" cy="0" rx="30" ry="26" fill="#2d1810" />
+          <!-- Closed Furry Eyelid lines -->
+          <path d="M -22,-6 Q -12,2 -2,-6" fill="none" stroke="#f0c080" stroke-width="3" stroke-linecap="round" />
+          <path d="M 2,-6 Q 12,2 22,-6" fill="none" stroke="#f0c080" stroke-width="3" stroke-linecap="round" />
+          <!-- Furry brows -->
+          <path d="M -20,-14 Q -12,-18 -4,-12" fill="none" stroke="#d49244" stroke-width="2" />
+          <path d="M 4,-12 Q 12,-18 20,-14" fill="none" stroke="#d49244" stroke-width="2" />
+        </g>
+        <text x="116" y="160" font-size="12" font-weight="700" fill="#6ee7b7" text-anchor="middle">3. Double-Blink State</text>
+        <text x="16" y="182" font-size="10.5" fill="#ffffff" fill-opacity="0.7">Socket-clipped furry eyelid sweep closes &amp; opens twice in rapid succession whenever spider halts.</text>
+      </g>
+    </g>
+
+    <!-- Architecture Description Box -->
+    <g transform="translate(32, 340)">
+      <rect width="736" height="145" rx="16" fill="#000000" fill-opacity="0.4" stroke="#ffffff" stroke-opacity="0.1" />
+      <g transform="translate(18, 16)" font-size="11" fill="#ffffff" fill-opacity="0.85">
+        <text x="0" y="12" font-weight="700" fill="#ffffff">Continuous Verlet Silk Dragline &amp; Web Network:</text>
+        <text x="0" y="28" fill-opacity="0.75">Spider is permanently tethered at spinnerets to a multi-node Verlet rope chain with Jakobsen constraint relaxation,</text>
+        <text x="0" y="44" fill-opacity="0.75">catenary sag, and transverse wave propagation. Fast cursor swiping cuts and releases ropes with realistic recoil.</text>
+
+        <text x="0" y="74" font-weight="700" fill="#ffffff">Walking on 3D &ldquo;Mrityuuu&rdquo; &amp; Interactive Entities:</text>
+        <text x="0" y="90" fill-opacity="0.75">As the spider walks across the 3D extruded letters, diaries, coffee mug, and watch, it climbs 3D collision walls and</text>
+        <text x="0" y="106" fill-opacity="0.75">tacks down clean, thin Verlet silk draglines. Stepping on the ink bottle leaves realistic ink footprints.</text>
+      </g>
+    </g>
+  </g>
+</svg>

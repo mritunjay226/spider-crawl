@@ -1,0 +1,325 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" style="background:#8B0000; font-family: 'Inter', system-ui, -apple-system, sans-serif;">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="deskLamp" cx="620" cy="380" r="420" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#fff7dc" stop-opacity="0.28" />
+      <stop offset="35%" stop-color="#ffe6b4" stop-opacity="0.14" />
+      <stop offset="70%" stop-color="#000000" stop-opacity="0.22" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.65" />
+    </radialGradient>
+
+    <!-- Glass Filter -->
+    <filter id="glassBlur" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="8" />
+      <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" />
+    </filter>
+
+    <linearGradient id="glassGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.45" />
+    </linearGradient>
+
+    <!-- Silk Glow -->
+    <filter id="silkGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Spider Drop Shadow -->
+    <filter id="dropShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="14" />
+      <feColorMatrix type="matrix" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.65 0"/>
+    </filter>
+  </defs>
+
+  <!-- Tabletop base -->
+  <rect width="1200" height="675" fill="#8B0000" />
+
+  <!-- Leather desktop texture lines -->
+  <g stroke="#660000" stroke-width="1" opacity="0.3">
+    <path d="M0,150 Q300,140 600,155 T1200,150" fill="none" />
+    <path d="M0,320 Q400,310 800,325 T1200,315" fill="none" />
+    <path d="M0,490 Q200,500 700,485 T1200,495" fill="none" />
+  </g>
+
+  <!-- Desk-lamp spotlight beam -->
+  <circle cx="620" cy="380" r="450" fill="url(#deskLamp)" />
+
+  <!-- 3D Extruded Blocks: MRITYUUU -->
+  <g transform="translate(380, 290)">
+    <!-- 3D Block Base Shadow -->
+    <polygon points="0,45 440,45 420,85 -20,85" fill="#2d0000" opacity="0.75" />
+    <!-- 3D Extruded "Mrityuuu" block -->
+    <polygon points="0,0 440,0 420,40 -20,40" fill="#4a0404" stroke="#ff9999" stroke-width="1.5" stroke-opacity="0.4" />
+    <polygon points="-20,40 420,40 420,58 -20,58" fill="#250000" stroke="#ff9999" stroke-width="1" stroke-opacity="0.2" />
+    <!-- Text on 3D Block -->
+    <text x="210" y="28" font-family="'JetBrains Mono', monospace" font-size="28" font-weight="900" fill="#ffd700" text-anchor="middle" letter-spacing="8" opacity="0.95" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.8))">MRITYUUU</text>
+  </g>
+
+  <!-- Verlet Silk Web Network -->
+  <g stroke="#ffffff" stroke-width="1.4" opacity="0.85" filter="url(#silkGlow)">
+    <!-- Silk draglines spanning across canvas -->
+    <path d="M 120,40 Q 320,180 580,360" fill="none" stroke-dasharray="6,2" opacity="0.6" />
+    <path d="M 580,360 Q 750,220 1100,120" fill="none" />
+    <path d="M 580,360 Q 640,480 820,590" fill="none" />
+    <path d="M 580,360 Q 420,460 210,580" fill="none" />
+    <!-- Anchor connection nodes -->
+    <circle cx="120" cy="40" r="3" fill="#ffffff" />
+    <circle cx="1100" cy="120" r="3" fill="#ffffff" />
+    <circle cx="820" cy="590" r="3" fill="#ffffff" />
+    <circle cx="210" cy="580" r="3" fill="#ffffff" />
+    <!-- Cross threads -->
+    <path d="M 360,260 Q 480,280 680,270" fill="none" opacity="0.5" />
+    <path d="M 440,420 Q 560,430 710,400" fill="none" opacity="0.5" />
+  </g>
+
+  <!-- Jumping Spider (Center at x:580, y:360) -->
+  <g transform="translate(580, 350)">
+    <!-- Spider Body Shadow -->
+    <ellipse cx="0" cy="18" rx="65" ry="50" fill="#000000" filter="url(#dropShadow)" />
+
+    <!-- 8 Articulated IK Legs -->
+    <!-- Left Legs -->
+    <!-- L1 -->
+    <path d="M -22,-10 Q -65,-75 -115,-40 Q -155,-10 -170,45" fill="none" stroke="#22110c" stroke-width="9" stroke-linecap="round" />
+    <path d="M -22,-10 Q -65,-75 -115,-40 Q -155,-10 -170,45" fill="none" stroke="#d49244" stroke-width="4" stroke-linecap="round" opacity="0.8" />
+    <!-- L2 -->
+    <path d="M -28,5 Q -85,-30 -145,-10 Q -185,25 -205,95" fill="none" stroke="#22110c" stroke-width="8.5" stroke-linecap="round" />
+    <path d="M -28,5 Q -85,-30 -145,-10 Q -185,25 -205,95" fill="none" stroke="#b07030" stroke-width="3.5" stroke-linecap="round" opacity="0.8" />
+    <!-- L3 -->
+    <path d="M -26,20 Q -80,25 -135,55 Q -170,95 -185,160" fill="none" stroke="#22110c" stroke-width="8" stroke-linecap="round" />
+    <path d="M -26,20 Q -80,25 -135,55 Q -170,95 -185,160" fill="none" stroke="#8a5020" stroke-width="3" stroke-linecap="round" opacity="0.8" />
+    <!-- L4 -->
+    <path d="M -18,35 Q -65,75 -105,120 Q -130,165 -135,215" fill="none" stroke="#22110c" stroke-width="8" stroke-linecap="round" />
+    <path d="M -18,35 Q -65,75 -105,120 Q -130,165 -135,215" fill="none" stroke="#704018" stroke-width="3" stroke-linecap="round" opacity="0.8" />
+
+    <!-- Right Legs -->
+    <!-- R1 -->
+    <path d="M 22,-10 Q 65,-75 115,-40 Q 155,-10 170,45" fill="none" stroke="#22110c" stroke-width="9" stroke-linecap="round" />
+    <path d="M 22,-10 Q 65,-75 115,-40 Q 155,-10 170,45" fill="none" stroke="#d49244" stroke-width="4" stroke-linecap="round" opacity="0.8" />
+    <!-- R2 -->
+    <path d="M 28,5 Q 85,-30 145,-10 Q 185,25 205,95" fill="none" stroke="#22110c" stroke-width="8.5" stroke-linecap="round" />
+    <path d="M 28,5 Q 85,-30 145,-10 Q 185,25 205,95" fill="none" stroke="#b07030" stroke-width="3.5" stroke-linecap="round" opacity="0.8" />
+    <!-- R3 -->
+    <path d="M 26,20 Q 80,25 135,55 Q 170,95 185,160" fill="none" stroke="#22110c" stroke-width="8" stroke-linecap="round" />
+    <path d="M 26,20 Q 80,25 135,55 Q 170,95 185,160" fill="none" stroke="#8a5020" stroke-width="3" stroke-linecap="round" opacity="0.8" />
+    <!-- R4 -->
+    <path d="M 18,35 Q 65,75 105,120 Q 130,165 135,215" fill="none" stroke="#22110c" stroke-width="8" stroke-linecap="round" />
+    <path d="M 18,35 Q 65,75 105,120 Q 130,165 135,215" fill="none" stroke="#704018" stroke-width="3" stroke-linecap="round" opacity="0.8" />
+
+    <!-- Spider Abdomen (Opisthosoma) -->
+    <ellipse cx="0" cy="48" rx="36" ry="48" fill="#1c0f0a" stroke="#d49244" stroke-width="1.5" />
+    <!-- Abdomen Furry Markings -->
+    <path d="M -16,35 Q 0,45 16,35" stroke="#f0c080" stroke-width="2" fill="none" opacity="0.8" />
+    <path d="M -20,52 Q 0,64 20,52" stroke="#f0c080" stroke-width="2" fill="none" opacity="0.8" />
+    <path d="M -14,68 Q 0,78 14,68" stroke="#f0c080" stroke-width="2" fill="none" opacity="0.7" />
+
+    <!-- Cephalothorax (Carapace) -->
+    <ellipse cx="0" cy="-5" rx="34" ry="32" fill="#2d1810" stroke="#f5b360" stroke-width="1" />
+    <!-- Pedipalps -->
+    <path d="M -12,-28 Q -18,-45 -8,-52" fill="none" stroke="#f0c080" stroke-width="4.5" stroke-linecap="round" />
+    <path d="M 12,-28 Q 18,-45 8,-52" fill="none" stroke="#f0c080" stroke-width="4.5" stroke-linecap="round" />
+
+    <!-- Cute Jumping Spider Forward Eyes (Anterior Median Eyes) -->
+    <!-- Outer Eye Rings -->
+    <circle cx="-13" cy="-24" r="13" fill="#0d0705" stroke="#402010" stroke-width="2" />
+    <circle cx="13" cy="-24" r="13" fill="#0d0705" stroke="#402010" stroke-width="2" />
+    <!-- Glossy Iris -->
+    <circle cx="-13" cy="-24" r="10.5" fill="#050302" />
+    <circle cx="13" cy="-24" r="10.5" fill="#050302" />
+    <!-- Specular Highlight (Cute Glow) -->
+    <ellipse cx="-16" cy="-27" rx="4" ry="2.5" fill="#ffffff" opacity="0.95" />
+    <ellipse cx="10" cy="-27" rx="4" ry="2.5" fill="#ffffff" opacity="0.95" />
+    <circle cx="-10" cy="-20" r="1.5" fill="#ffffff" opacity="0.7" />
+    <circle cx="16" cy="-20" r="1.5" fill="#ffffff" opacity="0.7" />
+    <!-- Secondary Lateral Eyes -->
+    <circle cx="-28" cy="-20" r="5" fill="#050302" stroke="#402010" stroke-width="1" />
+    <circle cx="28" cy="-20" r="5" fill="#050302" stroke="#402010" stroke-width="1" />
+    <circle cx="-29" cy="-22" r="1.5" fill="#ffffff" opacity="0.8" />
+    <circle cx="27" cy="-22" r="1.5" fill="#ffffff" opacity="0.8" />
+
+    <!-- Silk Spinneret attachment point -->
+    <circle cx="0" cy="94" r="3" fill="#ffffff" opacity="0.9" filter="url(#silkGlow)" />
+  </g>
+
+  <!-- Interactive Target / Bug Prey -->
+  <g transform="translate(420, 210)">
+    <circle cx="0" cy="0" r="8" fill="#10b981" opacity="0.3" filter="drop-shadow(0 0 8px #10b981)" />
+    <circle cx="0" cy="0" r="4.5" fill="#34d399" />
+    <path d="M -7,-5 Q 0,-12 7,-5" fill="none" stroke="#6ee7b7" stroke-width="1" />
+    <text x="14" y="4" font-family="'JetBrains Mono', monospace" font-size="11" fill="#6ee7b7" font-weight="600">Fly (Target)</text>
+  </g>
+
+  <!-- ==================== HUD HEADER (TOP) ==================== -->
+  <g transform="translate(18, 16)">
+    <!-- Title Card -->
+    <rect width="360" height="48" rx="14" fill="#180404" fill-opacity="0.82" stroke="#ffffff" stroke-opacity="0.16" />
+    <rect x="8" y="8" width="32" height="32" rx="9" fill="#ffffff" fill-opacity="0.14" stroke="#ffffff" stroke-opacity="0.25" />
+    <text x="24" y="29" font-size="14" font-weight="900" fill="#ffffff" text-anchor="middle">3D</text>
+    <text x="48" y="24" font-size="13" font-weight="700" fill="#ffffff">Salticidae IK &amp; Verlet Silk</text>
+    <!-- State Badge -->
+    <rect x="235" y="12" width="112" height="18" rx="9" fill="#10b981" fill-opacity="0.2" stroke="#10b981" stroke-opacity="0.4" />
+    <text x="291" y="24" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#6ee7b7" text-anchor="middle">IDLE · CUTE HEAD</text>
+    <text x="48" y="38" font-size="10" fill="#ffffff" fill-opacity="0.65">Swipe ropes to slice · Press Z to Zipline · Walk on 3D</text>
+  </g>
+
+  <!-- Quick Action Buttons Dock (Top Right) -->
+  <g transform="translate(390, 16)">
+    <rect width="670" height="48" rx="14" fill="#180404" fill-opacity="0.82" stroke="#ffffff" stroke-opacity="0.16" />
+    <!-- Buttons -->
+    <g transform="translate(10, 8)" font-size="11" font-weight="600" fill="#ffffff">
+      <!-- Shoot Web -->
+      <rect x="0" y="0" width="85" height="32" rx="9" fill="#ffffff" fill-opacity="0.15" stroke="#ffffff" stroke-opacity="0.25" />
+      <text x="42" y="20" text-anchor="middle">🕸️ Web (W)</text>
+
+      <!-- Zipline -->
+      <rect x="92" y="0" width="85" height="32" rx="9" fill="#0284c7" fill-opacity="0.3" stroke="#38bdf8" stroke-opacity="0.4" />
+      <text x="134" y="20" text-anchor="middle" fill="#bae6fd">🚡 Zip (Z)</text>
+
+      <!-- Breeze -->
+      <rect x="184" y="0" width="85" height="32" rx="9" fill="#059669" fill-opacity="0.25" stroke="#34d399" stroke-opacity="0.35" />
+      <text x="226" y="20" text-anchor="middle" fill="#a7f3d0">🍃 Breeze (B)</text>
+
+      <!-- Lamp -->
+      <rect x="276" y="0" width="80" height="32" rx="9" fill="#d97706" fill-opacity="0.25" stroke="#fbbf24" stroke-opacity="0.35" />
+      <text x="316" y="20" text-anchor="middle" fill="#fde68a">🔦 Lamp (L)</text>
+
+      <!-- Clear -->
+      <rect x="363" y="0" width="75" height="32" rx="9" fill="#ffffff" fill-opacity="0.1" stroke="#ffffff" stroke-opacity="0.15" />
+      <text x="400" y="20" text-anchor="middle" fill="#e2e8f0">🧹 Clear (C)</text>
+
+      <!-- Blink -->
+      <rect x="445" y="0" width="85" height="32" rx="9" fill="#d97706" fill-opacity="0.25" stroke="#fbbf24" stroke-opacity="0.35" />
+      <text x="487" y="20" text-anchor="middle" fill="#fde68a">👀 Blink (Sp)</text>
+
+      <!-- Hop -->
+      <rect x="537" y="0" width="55" height="32" rx="9" fill="#ffffff" fill-opacity="0.1" stroke="#ffffff" stroke-opacity="0.15" />
+      <text x="564" y="20" text-anchor="middle">🦗 Hop</text>
+
+      <!-- SFX -->
+      <rect x="599" y="0" width="55" height="32" rx="9" fill="#ffffff" fill-opacity="0.1" stroke="#ffffff" stroke-opacity="0.15" />
+      <text x="626" y="20" text-anchor="middle">🔇 SFX</text>
+    </g>
+  </g>
+
+  <!-- Toggle HUD (Top Far Right) -->
+  <g transform="translate(1072, 16)">
+    <rect width="110" height="48" rx="14" fill="#180404" fill-opacity="0.82" stroke="#ffffff" stroke-opacity="0.16" />
+    <text x="55" y="29" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">👁️ Hide HUD (H)</text>
+  </g>
+
+  <!-- ==================== TETRAPOD GAIT TELEMETRY (BOTTOM-LEFT) ==================== -->
+  <g transform="translate(18, 435)">
+    <rect width="255" height="222" rx="16" fill="#180404" fill-opacity="0.85" stroke="#ffffff" stroke-opacity="0.16" />
+    
+    <!-- Title -->
+    <text x="14" y="24" font-size="10" font-weight="700" fill="#ffffff" fill-opacity="0.7" letter-spacing="1">TETRAPOD GAIT PHASE</text>
+    <text x="241" y="24" font-family="'JetBrains Mono', monospace" font-size="11" fill="#fcd34d" text-anchor="end">0 px/s</text>
+
+    <!-- Leg Phase Matrix -->
+    <g transform="translate(14, 34)">
+      <rect width="227" height="92" rx="10" fill="#000000" fill-opacity="0.45" stroke="#ffffff" stroke-opacity="0.08" />
+      <!-- Left Column (Set A) -->
+      <text x="12" y="20" font-family="'JetBrains Mono', monospace" font-size="10" fill="#6ee7b7">L1 (Set A)</text>
+      <circle cx="95" cy="17" r="4" fill="#10b981" />
+      <text x="12" y="42" font-family="'JetBrains Mono', monospace" font-size="10" fill="#fde68a">L2 (Set B)</text>
+      <circle cx="95" cy="39" r="4" fill="#f59e0b" opacity="0.3" />
+      <text x="12" y="64" font-family="'JetBrains Mono', monospace" font-size="10" fill="#6ee7b7">L3 (Set A)</text>
+      <circle cx="95" cy="61" r="4" fill="#10b981" />
+      <text x="12" y="84" font-family="'JetBrains Mono', monospace" font-size="10" fill="#fde68a">L4 (Set B)</text>
+      <circle cx="95" cy="81" r="4" fill="#f59e0b" opacity="0.3" />
+
+      <!-- Right Column (Set B) -->
+      <circle cx="132" cy="17" r="4" fill="#f59e0b" opacity="0.3" />
+      <text x="215" y="20" font-family="'JetBrains Mono', monospace" font-size="10" fill="#fde68a" text-anchor="end">R1 (Set B)</text>
+      <circle cx="132" cy="39" r="4" fill="#10b981" />
+      <text x="215" y="42" font-family="'JetBrains Mono', monospace" font-size="10" fill="#6ee7b7" text-anchor="end">R2 (Set A)</text>
+      <circle cx="132" cy="61" r="4" fill="#f59e0b" opacity="0.3" />
+      <text x="215" y="64" font-family="'JetBrains Mono', monospace" font-size="10" fill="#fde68a" text-anchor="end">R3 (Set B)</text>
+      <circle cx="132" cy="81" r="4" fill="#10b981" />
+      <text x="215" y="84" font-family="'JetBrains Mono', monospace" font-size="10" fill="#6ee7b7" text-anchor="end">R4 (Set A)</text>
+    </g>
+
+    <!-- Cute Head Crossfade Progress -->
+    <text x="14" y="145" font-size="10" fill="#ffffff" fill-opacity="0.7">Cute Head Crossfade</text>
+    <text x="241" y="145" font-family="'JetBrains Mono', monospace" font-size="10" fill="#ffffff" text-anchor="end">100%</text>
+    <rect x="14" y="152" width="227" height="6" rx="3" fill="#000000" fill-opacity="0.5" />
+    <rect x="14" y="152" width="227" height="6" rx="3" fill="url(#glassGrad)" />
+
+    <!-- Blink & Verlet Status -->
+    <text x="14" y="178" font-size="10" fill="#ffffff" fill-opacity="0.7">Stop Double-Blink</text>
+    <text x="241" y="178" font-family="'JetBrains Mono', monospace" font-size="10" fill="#fde68a" text-anchor="end">Ready (2× on stop)</text>
+    <line x1="14" y1="188" x2="241" y2="188" stroke="#ffffff" stroke-opacity="0.1" />
+    <text x="14" y="206" font-size="10" fill="#ffffff" fill-opacity="0.7">Verlet Silk Network</text>
+    <text x="241" y="206" font-family="'JetBrains Mono', monospace" font-size="10" fill="#bae6fd" text-anchor="end">Tethered · Walk on 3D</text>
+  </g>
+
+  <!-- ==================== CONTROLS DOCK (BOTTOM-RIGHT) ==================== -->
+  <g transform="translate(900, 395)">
+    <rect width="282" height="262" rx="16" fill="#180404" fill-opacity="0.85" stroke="#ffffff" stroke-opacity="0.16" />
+    
+    <!-- Title -->
+    <text x="16" y="24" font-size="11" font-weight="700" fill="#ffffff" fill-opacity="0.9" letter-spacing="0.5">CURSOR, WEB &amp; IK</text>
+    <text x="266" y="24" font-size="10" fill="#38bdf8" text-anchor="end">Controls ▾ (D)</text>
+
+    <!-- Tracking Mode Buttons -->
+    <g transform="translate(16, 34)">
+      <!-- Cursor Mode (Active) -->
+      <rect x="0" y="0" width="120" height="28" rx="8" fill="#ffffff" fill-opacity="0.25" stroke="#ffffff" stroke-opacity="0.4" />
+      <text x="60" y="18" font-size="11" font-weight="600" fill="#ffffff" text-anchor="middle">🖱️ Pointer</text>
+
+      <!-- Laser Pointer -->
+      <rect x="128" y="0" width="120" height="28" rx="8" fill="#000000" fill-opacity="0.4" stroke="#ffffff" stroke-opacity="0.1" />
+      <text x="188" y="18" font-size="11" font-weight="600" fill="#ffffff" fill-opacity="0.75" text-anchor="middle">🔴 Laser</text>
+
+      <!-- Click Prey -->
+      <rect x="0" y="34" width="120" height="28" rx="8" fill="#000000" fill-opacity="0.4" stroke="#ffffff" stroke-opacity="0.1" />
+      <text x="60" y="52" font-size="11" font-weight="600" fill="#ffffff" fill-opacity="0.75" text-anchor="middle">🪰 Hunt Prey</text>
+
+      <!-- Auto Patrol -->
+      <rect x="128" y="34" width="120" height="28" rx="8" fill="#000000" fill-opacity="0.4" stroke="#ffffff" stroke-opacity="0.1" />
+      <text x="188" y="52" font-size="11" font-weight="600" fill="#ffffff" fill-opacity="0.75" text-anchor="middle">♾️ Auto Patrol</text>
+    </g>
+
+    <!-- Parameter Sliders -->
+    <g transform="translate(16, 110)">
+      <!-- Scurry Speed -->
+      <text x="0" y="12" font-size="10.5" fill="#ffffff" fill-opacity="0.85">Scurry Speed</text>
+      <text x="248" y="12" font-family="'JetBrains Mono', monospace" font-size="10.5" fill="#fde68a" text-anchor="end">1.0×</text>
+      <rect x="0" y="18" width="248" height="5" rx="2.5" fill="#ffffff" fill-opacity="0.2" />
+      <circle cx="115" cy="20.5" r="7" fill="#ffffff" stroke="#8B0000" stroke-width="2" />
+
+      <!-- IK Stride -->
+      <text x="0" y="44" font-size="10.5" fill="#ffffff" fill-opacity="0.85">IK Step Stride &amp; Arc Lift</text>
+      <text x="248" y="44" font-family="'JetBrains Mono', monospace" font-size="10.5" fill="#fde68a" text-anchor="end">1.00×</text>
+      <rect x="0" y="50" width="248" height="5" rx="2.5" fill="#ffffff" fill-opacity="0.2" />
+      <circle cx="115" cy="52.5" r="7" fill="#ffffff" stroke="#8B0000" stroke-width="2" />
+
+      <!-- Spider Scale -->
+      <text x="0" y="76" font-size="10.5" fill="#ffffff" fill-opacity="0.85">Spider Scale</text>
+      <text x="248" y="76" font-family="'JetBrains Mono', monospace" font-size="10.5" fill="#fde68a" text-anchor="end">0.78×</text>
+      <rect x="0" y="82" width="248" height="5" rx="2.5" fill="#ffffff" fill-opacity="0.2" />
+      <circle cx="85" cy="84.5" r="7" fill="#ffffff" stroke="#8B0000" stroke-width="2" />
+    </g>
+
+    <!-- Surface Themes -->
+    <g transform="translate(16, 222)">
+      <text x="0" y="18" font-size="10" fill="#ffffff" fill-opacity="0.65">Surface:</text>
+      <!-- Pills -->
+      <rect x="52" y="5" width="48" height="20" rx="6" fill="#ffffff" fill-opacity="0.25" stroke="#ffffff" stroke-opacity="0.4" />
+      <text x="76" y="19" font-size="9.5" fill="#ffffff" text-anchor="middle">Crimson</text>
+      
+      <rect x="105" y="5" width="42" height="20" rx="6" fill="#000000" fill-opacity="0.4" stroke="#ffffff" stroke-opacity="0.1" />
+      <text x="126" y="19" font-size="9.5" fill="#ffffff" fill-opacity="0.75" text-anchor="middle">Studio</text>
+
+      <rect x="151" y="5" width="36" height="20" rx="6" fill="#000000" fill-opacity="0.4" stroke="#ffffff" stroke-opacity="0.1" />
+      <text x="169" y="19" font-size="9.5" fill="#ffffff" fill-opacity="0.75" text-anchor="middle">Leaf</text>
+
+      <rect x="191" y="5" width="36" height="20" rx="6" fill="#000000" fill-opacity="0.4" stroke="#ffffff" stroke-opacity="0.1" />
+      <text x="209" y="19" font-size="9.5" fill="#ffffff" fill-opacity="0.75" text-anchor="middle">Grid</text>
+    </g>
+  </g>
+</svg>
